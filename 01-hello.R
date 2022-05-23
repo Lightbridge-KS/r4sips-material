@@ -8,7 +8,7 @@ getRversion()
 
 #' This is a comment with **markdown syntax** enabled
 
-# Basic R Object (scalar) ---------------------------------------------------------
+# Basic R Object  ---------------------------------------------------------
 
 ## Character
 "Hello World"
@@ -96,6 +96,19 @@ NULL
 
 1 >= 1 # greater than or equal to
 1 <= 1 # lesser than or equal to
+
+##' And `&`
+
+FALSE & TRUE
+
+TRUE & TRUE
+
+
+##' Or `|`
+
+FALSE | FALSE | TRUE
+
+FALSE | FALSE
 
 
 # Variable Introduction ----------------------------------------------------------------
@@ -194,10 +207,12 @@ rm(x, y) # remove x and y
 # Compile Report by Ctrl+Shift+K (Windows) or Cmd+Shift+K (Mac)
 
 
+
+
 # Home Work ---------------------------------------------------------------
 
 
-#' Write formula to calculate your BMI (Body Mass Index) with using 2 variable:
+#' Write a formula to calculate your BMI (Body Mass Index) with using 2 variable:
 #'
 #' - `my_weight_kg`: your weight in kg
 #' - `my_height_cm`: your height in cm
@@ -209,8 +224,6 @@ my_weight_kg <- 70
 my_height_cm <- 180
 
 # my_bmi
-
-
 
 
 
