@@ -27,7 +27,16 @@ Insert R code chunk by `Ctrl+Alt+I` (Windows), `Cmd+Option+I` (Mac)
 R code will be evaluated in the code chunk like this:
 
 ```{r}
-1 + 1
+x <- 1 + 1
+x
+```
+
+And `x` is equal to `r x`.
+
+Code chunk like this will not be evaluated:
+
+```r
+1 * 2
 ```
 
 For more details see: <http://rmarkdown.rstudio.com> or [this link](http://rmarkdown.rstudio.com)
