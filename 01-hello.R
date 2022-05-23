@@ -6,6 +6,8 @@ getRversion()
 
 # This is a comment
 
+#' This is a comment with **markdown syntax** enabled
+
 # Basic R Object (scalar) ---------------------------------------------------------
 
 ## Character
@@ -72,12 +74,29 @@ NULL
 # You can group calculation with parenthesis
 
 (1 + 2) * 3
-
 1 + 2 * 3
 
 (2 * (1 + 2)) ^ pi
-
 2 * 1 + 2 ^ pi
+
+# Logical Operators -----------------------------------------------------
+
+##' Check equality with `==`
+1 == 1
+"A" == "a"
+
+##' Check *Not* equal with `!=`
+1 != 1
+1 != 2
+
+##' Check lesser, greater than with `>`, `<`, `>=`, `<=` :
+
+2 > 1 # greater than
+1 < 2 # lesser than
+
+1 >= 1 # greater than or equal to
+1 <= 1 # lesser than or equal to
+
 
 # Variable Introduction ----------------------------------------------------------------
 
@@ -86,6 +105,9 @@ x <- 1
 
 print(x)
 x
+
+# Assign and print the value at the same time
+(x <- 2)
 
 # Another way to assign variable (but not typical for R User)
 y = 2
@@ -155,12 +177,12 @@ y <- x + 5  # Assign to another variable
 y
 
 
-# Use `ls()` command to list variable names defined in Global Environment
+# Use `ls()` function to list variable names defined in Global Environment
 ?ls
 
 ls()
 
-# Use `rm()` to remove variable
+# Use `rm()` function to remove variable
 ?rm
 
 rm(x, y) # remove x and y
