@@ -1,0 +1,39 @@
+---
+title: "R Markdown Example"
+author: "kittipos sirivongrungson"
+date: '2022-05-23'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Markdown Syntax
+
+This is a normal text, **bold**, *italic*, `code` format.
+
+1.  One
+2.  Two
+
+-   Bullet 1
+
+-   Bullet 2
+
+> A Block quote
+
+Insert R code chunk by `Ctrl+Alt+I` (Windows), `Cmd+Option+I` (Mac)
+
+R code will be evaluated in the code chunk like this:
+
+```{r}
+1 + 1
+```
+
+For more details see: <http://rmarkdown.rstudio.com> or [this link](http://rmarkdown.rstudio.com)
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3
