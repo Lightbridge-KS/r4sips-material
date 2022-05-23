@@ -1,0 +1,242 @@
+---
+title: "Atomic Vector"
+author: "kittipos sirivongrungson"
+date: '2022-05-23'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Create Atomic Vector
+
+You can create atomic vector with `c()` function.
+
+```{r}
+?c
+```
+
+Atomic vector must have elements with the **same** type (Note that `NA` denotes missing value)
+
+### Character Vector
+
+```{r}
+# Character Vector
+c("Harry", "Ron", "Hermione", NA)
+```
+
+### Numeric Vector
+
+```{r}
+## Double Vector
+c(1, 2.2, NA)
+## Integer vector
+c(1L, 2L, 3L, 4L, 5L)
+```
+
+A shorthand version is:
+
+```{r}
+1:5
+-2:2
+```
+
+
+### Logical Vector
+
+```{r}
+c(T, F, NA)
+```
+
+
+
+## Coercion
+
+What if we combine different types
+
+```{r}
+(combined <- c(FALSE, 1, "Harry"))
+```
+
+The result will be **coerced** in this order: 
+
+> logical -> integer -> double -> character
+    
+
+```{r}
+typeof(combined)
+```
+
+## Operators with Vector
+
+### Math Operators
+
+Most math operations are **element-wise** operations on vectors:
+
+```{r}
+(x <- 1:5)
+
+x + 10
+x * 10
+x / 10
+
+2 ^ x
+
+x %% 2
+```
+
+Some are not element-wise, such as Matrix multiplication:
+
+```{r}
+x %*% x # Inner Product 
+x %o% x # Outer Product
+```
+
+### Logical Operators
+
+Logical operations are **element-wise** operations on vector:
+
+```{r}
+(x <- 1:5)
+
+x == 2
+x != 2
+
+x >= 2
+```
+
+
+## Length of Vector
+
+```{r}
+?length
+```
+
+```{r}
+students <- c("Harry", "Ron", "Hermione", NA)
+
+length(students)
+length("Hello") # length of a scalar
+```
+
+## Subset Vector
+
+Subset vector by using square brackets: `[` or `[[` (preferred)
+
+### Logical subsetting
+
+```{r}
+(students <- c("Harry", "Ron", "Hermione"))
+```
+
+```{r}
+students[c(TRUE, FALSE, FALSE)]
+
+students == "Harry"
+
+students[students == "Harry"]
+```
+
+
+### Integer subsetting
+
+```{r}
+(students <- c("Harry", "Ron", "Hermione"))
+```
+
+The **first student** is:
+
+```{r}
+students[1]
+students[[1]]
+```
+
+The **last student** is:
+
+
+```{r}
+
+
+```
+
+or another way using `length()`
+
+```{r}
+
+```
+
+**Subset multiple values**
+
+```{r}
+students[c(1,2)]
+students[1:2]
+```
+
+Negate selection with negative number.
+
+```{r}
+students[-1]
+```
+
+
+
+
+## Named Vector 
+
+### Create (Option 1)
+
+Create named vector by `c(name_1 = value_1, name_2 = value_2, ...)`,
+
+where name must be a character, and value can be any atomic type.
+
+```{r}
+score <- c(Harry = 8, Ron = 7, Hermione = 10)
+score
+```
+
+```{r}
+typeof(score)
+```
+
+Get names of vector by `names()`
+
+```{r}
+?names
+score_nm <- names(score)
+score_nm
+```
+
+```{r}
+typeof(score_nm) # Names is a character vector
+```
+
+### Create (Option 2)
+
+Create named vector from 2 vectors:
+
+```{r}
+score <- c(8, 7, 10)
+students <- c("Harry", "Ron", "Hermione")
+
+names(score) <- students
+score
+```
+
+### Subset Named Vector
+
+Subset by **position**
+
+```{r}
+score[1] 
+score[[1]] # No names
+```
+
+Subset by **name**
+
+```{r}
+score["Harry"]
+score[["Harry"]] # No names
+```
+
+
