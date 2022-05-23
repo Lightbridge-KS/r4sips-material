@@ -2,6 +2,8 @@ print("Hello World")
 
 ?print
 
+getRversion()
+
 # This is a comment
 
 # Basic R Object (scalar) ---------------------------------------------------------
