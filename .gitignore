@@ -46,6 +46,6 @@ vignettes/*.pdf
 /dev/
 
 # Answer Files
-exercise/*ans.R
+exercise/*ans*
 
 
