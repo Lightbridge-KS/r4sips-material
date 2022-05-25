@@ -42,3 +42,10 @@ vignettes/*.pdf
 /*.pdf
 # HTML
 *.html
+# Dev
+/dev/
+
+# Answer Files
+exercise/*ans.R
+
+
