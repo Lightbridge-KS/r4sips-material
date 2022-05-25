@@ -8,18 +8,51 @@ getRversion()
 
 #' This is a comment with **markdown syntax** enabled
 
-# Basic R Object  ---------------------------------------------------------
+# Basic R Object ----------------------------------------------------------
 
-## Character
-"Hello World"
+# Character ---------------------------------------------------------------
+
+## Scalar
+"Kittipos"
+
+my_name <- "Kittipos"
+
+print(my_name)
+
+my_name
 
 ?typeof
 
-typeof("Hello World")
+typeof(my_name)
+
+## Exercise: Say Hello
+my_name <- "A"
+my_name
+
+?paste
+paste("Hello", my_name)
+
+## Characters vector of length 2
+?c
+c("mango", "strawberry")
+
+vegetables <- c("carrot", "broccoli", "basil")
+vegetables
+
+## Check number of elements in vector
+?length
+length(vegetables)
+
+paste("I like to eat", vegetables)
+
+paste(vegetables, collapse = ", ")
+
+# Numeric -----------------------------------------------------------------
+#'
+#' Numeric can be "integer" or "double".
 
 ## Integer
 1L
-0L
 -1L
 
 typeof(1L)
@@ -29,16 +62,70 @@ typeof(1L)
 1.2
 -2.5
 
-typeof(1)
 typeof(1.2)
-typeof(-2.5)
 
 1e2 # Scientific notation is acceptable
 
-## Logical
+## Numeric vector
+
+c(1L, 2L, 3L) # Integer
+c(1.5, 1.7) # Double
+
+1:3
+
+
+length(1:3)
+
+# Math Operation -------------------------------------------------------
+
+1 + 1
+
+(3 - 1) * 3
+
+(4 / 2) ^ 2
+
+
+# Integer division
+7 %/% 2
+# Modulus (remainder)
+7 %% 2
+
+
+
+# Exercise 1: MAP calculator --------------------------------------------------------------
+#' Please go to `R/map-calc.R`.
+#' You can go to that file by uncomment and run the code below.
+
+# rstudioapi::navigateToFile("R/map-calc.R")
+
+
+# Math Operation on Numeric Vector ----------------------------------------
+#'
+#' Most of the operations with vector are **element-wise** operation
+
+x <- 1:6
+x
+
+(x <- 1:6)
+
+x + x
+
+x + 100
+
+2 ^ x
+
+x * 1:2
+
+# 1:5 + 1:2
+
+#' Go to `R/map-calc.R` again and try to use blood pressure as vector.
+
+
+# Logical -----------------------------------------------------------------
 
 TRUE
 FALSE
+
 # Or, abbreviated version
 T
 F
@@ -46,38 +133,51 @@ F
 typeof(TRUE)
 typeof(FALSE)
 
-## Missing Value
-NA
+# Logical Vector
+c(TRUE, FALSE)
+
+
+
+# Other Types -------------------------------------------------------------
 
 ## Nothing
 NULL
 
+## Missing Value
+NA
 
-# Math Operators -------------------------------------------------------
+#' `NA` can present in any atomic vector type
 
-# Plus
-1 + 1
-# Minus
-2 - 1
-# Times
-3 * 2
-# Divide
-4 / 2
-# Exponent
-3 ^ 2
+(countries <- c("italy", "japan", NA))
 
-# Integer division
-7 %/% 2
-# Modulus (remainder)
-7 %% 2
+length(countries)
 
-# You can group calculation with parenthesis
+(top_3_nums <- c(3, 5, NA))
 
-(1 + 2) * 3
-1 + 2 * 3
+#' `NA` is infectious (i.e., they tend to propagate)
+top_3_nums * 2
 
-(2 * (1 + 2)) ^ pi
-2 * 1 + 2 ^ pi
+
+# Clean Up ---------------------------------------------------------------
+
+
+
+# Use `ls()` function to list variable names defined in Global Environment
+?ls
+
+ls()
+
+# Use `rm()` function to remove variable
+?rm
+
+rm(x, y) # remove x and y
+
+# To Remove all variables, but be careful there's no going back!
+# rm(list = ls())
+
+
+# Compile Report by Ctrl+Shift+K (Windows) or Cmd+Shift+K (Mac)
+
 
 # Logical Operators -----------------------------------------------------
 
@@ -109,103 +209,6 @@ TRUE & TRUE
 FALSE | FALSE | TRUE
 
 FALSE | FALSE
-
-
-# Variable Introduction ----------------------------------------------------------------
-
-# Assign variable
-x <- 1
-
-print(x)
-x
-
-# Assign and print the value at the same time
-(x <- 2)
-
-# Another way to assign variable (but not typical for R User)
-y = 2
-y
-
-# Any object can be assign to a variable
-
-greet <- "Hi"
-greet
-
-is_correct <- TRUE
-is_correct
-
-# Variable Name -----------------------------------------------------------
-
-
-#' Variable Name:
-#'
-#' - Case sensitive
-#' - Use a lowercase letter
-#' - Don't use space or special characters
-#' - Can't begin with digit
-#'
-#' - Try to use a **meaningful** name !!
-
-## Good Name
-
-magician <- "David"
-my_name <- "Kittipos" # Use underscore `_` to separate word
-
-
-## OK, I don't recommend (but, some people might use)
-
-Magician <- "Criss"
-myName <- "Kittipos"
-
-## Don't Use these Names:
-
-?Reserved # Reserved words
-
-
-# 1name <- "Kittipos" # Invalid name (will error)
-# _name <- "Kittipos" # Invalid name (will error)
-
-
-# Using Variable ----------------------------------------------------------
-
-
-# Variable can be overwritten (even with different type)
-x <- 1
-x
-x <- "Hello"
-x
-
-# Use variable for calculation
-x <- 2
-x + 1
-# But it will not be saved
-x
-
-# To save value, you must assign the result to a variable:
-
-x <- x + 2  # Assign to itself
-x
-
-y <- x + 5  # Assign to another variable
-y
-
-
-# Use `ls()` function to list variable names defined in Global Environment
-?ls
-
-ls()
-
-# Use `rm()` function to remove variable
-?rm
-
-rm(x, y) # remove x and y
-
-# To Remove all variables, but be careful there's no going back!
-# rm(list = ls())
-
-
-# Compile Report by Ctrl+Shift+K (Windows) or Cmd+Shift+K (Mac)
-
 
 
 
