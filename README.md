@@ -1,4 +1,4 @@
-# r4sips-material
+# `r4sips` code material
 
 Material for teaching R for SIPS
 
@@ -13,7 +13,7 @@ Material for teaching R for SIPS
 
 ## Extra Package
 
-Please install the following packages by:
+Please install the required packages by:
 
 ```r
 install.packages("rmarkdown")
