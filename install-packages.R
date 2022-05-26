@@ -1,7 +1,7 @@
 ### Install R package
 
 if(FALSE){
-#' Install package by `install.packages("PkgName")`
+#' Install package by `install.packages("pkgname")`
 
 
 install.packages("rmarkdown")
