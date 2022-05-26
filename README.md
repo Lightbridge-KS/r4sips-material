@@ -4,10 +4,11 @@ Material for teaching R for SIPS
 
 ## Contents
 
-- [`01-hello.R`](01-hello.R): Introduction to R, Intro to function, Scalar R Object, Variable
+- [`01-hello.R`](01-hello.R): Introduction to R, Variable, Atomic vector
 
-- [`02-function.R`](02-function.R): Write your own function
+- [`02-function.R`](02-function.R): How to write your own function
 
+- [`03-vector-more.Rmd`](03-vector-more.Rmd): vector subsetting & named vector
 
 
 ## Extra Package
