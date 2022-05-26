@@ -38,6 +38,9 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
+# Data Store
+.DS_Store
+
 # PDF
 /*.pdf
 # HTML
@@ -48,4 +51,6 @@ vignettes/*.pdf
 # Answer Files
 exercise/*ans*
 
+# Teacher Files
+/T*
 
