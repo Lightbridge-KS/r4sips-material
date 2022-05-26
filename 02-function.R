@@ -1,20 +1,45 @@
+### How to write your own function
 
-# Write Function ----------------------------------------------------------------
-
-
-hello <- function(){
-
-  print("Hello, World")
-
-}
-
-hello() # Call a function
-
-hello # Show source code
+# Function with No Argument -----------------------------------------------
 
 
-plus_one <- function(x) {
-  x + 1
-}
 
-plus_one(2)
+# Function with Argument -------------------------------------------------
+
+### Hello
+
+
+
+
+# Default Value of Argument -----------------------------------------------
+
+
+
+# Multiple Arguments ------------------------------------------------------
+
+
+
+# Return Value of Function ------------------------------------------------------------
+
+### Descriptive version
+
+
+
+### Short Version
+
+
+
+### One-line Version
+
+
+
+
+
+# Variable Scoping -----------------------------------------------------------------
+#'
+#' Function will find a variable from the inner to outer environment
+
+
+
+
+# Passing any number of args with ... -------------------------------------------------------------
