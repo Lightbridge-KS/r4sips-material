@@ -1,0 +1,249 @@
+---
+title: "Control Flow"
+author: "kittipos sirivongrungson"
+date: '2022-05-26'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Loop
+
+`for` loop is popular in R
+
+## Loop for Side Effect
+
+Loop Over Vector
+
+```{r}
+friends <- c("Amy", "Tom", "Jelly")
+
+
+
+```
+
+Loop Over Index (usually use more often)
+
+using `seq_along()` is recommended
+
+```{r}
+friends <- c("Amy", "Tom", "Jelly")
+
+
+```
+
+
+## Loop for Assign Value (Common)
+
+Step 1: Create empty vector to store output. You can use `vector()` function
+
+Step 2: Loop over desired vector and assign each elements to each element of output.
+
+Example
+
+```{r}
+friends <- c("Amy", "Tom", "Jelly")
+```
+
+
+```{r}
+# Create Empty Vector
+
+
+# Loop over elements and assign value of each elements to output vector
+
+
+```
+
+This is actually redundant because `paste` is already a vectorized function.
+
+```{r}
+
+```
+
+
+
+
+
+# Conditionals
+
+## Syntax
+
+### `if` statement
+
+The syntax is:
+
+```{r eval=FALSE}
+if (condition_1) {
+  
+  option_1
+  
+} else if (condition_2) {
+  
+  option_2
+  
+} else {
+  
+  catch_all
+
+}
+```
+
+
+### `ifelse()`
+
+```{r eval=FALSE}
+ifelse(condition, code_if_true, code_if_false)
+```
+
+
+
+
+### Compare Number: Version 1
+
+```{r}
+x <- 2
+y <- 5
+
+if(x < y) cat("x is less than y")
+
+if(x > y) cat("x is greater than y")
+
+if(x == y) cat("x is equal to y")
+```
+
+```{r}
+compare <- function(x, y) {
+  
+
+  
+}
+```
+
+```{r}
+compare(x = 1, y = 2)
+compare(x = 2, y = 1)
+compare(x = 1, y = 1)
+```
+
+
+### Compare Number: Version 2
+
+
+```{r}
+compare <- function(x, y) {
+  
+
+}
+```
+
+```{r}
+compare(x = 1, y = 2)
+compare(x = 2, y = 1)
+compare(x = 1, y = 1)
+```
+
+### Parity
+
+Testing even vs odd number
+
+```{r}
+parity <- function(x){
+  
+
+}
+```
+
+
+```{r}
+parity(0)
+parity(1)
+parity(2)
+```
+
+### Parity (Vectorized)
+
+How to test parity every elements in a vector
+
+```{r}
+nums <- c(1:3, 8:10)
+```
+
+#### Loop
+
+```{r}
+out <- vector("numeric", length(nums))
+
+for (i in seq_along(nums)) {
+  
+  out[i] <- parity(nums[i])
+  
+}
+
+out
+```
+
+Shorter looping with `sapply()`
+
+```{r}
+sapply(nums, parity)
+```
+
+#### Ifelse
+
+Vectorized Version with `ifelse()` 
+
+```{r}
+parity_vec <- function(x) {
+  
+
+  
+}
+```
+
+```{r}
+parity_vec(nums)
+```
+
+#### Logical Subsetting
+
+Logical Subsetting (the fastest way)
+
+```{r}
+parity_subset <- function(x) {
+  
+
+  
+}
+
+parity_subset(nums)
+```
+
+
+### Homework: Grade
+
+Create grading function `grade()`
+
+If score in range
+
+[90, 100]: "A"
+
+[80, 90): "B"
+
+[70, 80): "C"
+
+[60, 70): "D"
+
+Otherwise: "F"
+
+```{r}
+grade <- function(score) {
+  
+
+}
+```
+
+
+

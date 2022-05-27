@@ -8,8 +8,9 @@ Material for teaching R for SIPS
 
 - [`02-function.R`](02-function.R): How to write your own function
 
-- [`03-vector-more.Rmd`](03-vector-more.Rmd): vector subsetting & named vector
+- [`03-vector-more.Rmd`](03-vector-more.Rmd): vector subsetting, named vector, dimension
 
+- [`04-control-flow.Rmd`](04-control-flow.Rmd): loop &s conditional 
 
 ## Extra Package
 
