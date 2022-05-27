@@ -10,13 +10,13 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## Length of Vector
+# Length of Vector
 
 ```{r}
 students <- c("Harry", "Ron", "Hermione", NA)
 ```
 
-## Subset Vector
+# Subset Vector
 
 Subset vector by using square brackets: `[` or `[[` (preferred)
 
@@ -84,6 +84,11 @@ Subset "Harry" and "Ron"
 
 ```
 
+
+# Attribute
+
+Attributes are **metadata** information that you can attach to object.
+
 ## Named Vector 
 
 ### Create (Option 1)
@@ -132,6 +137,29 @@ Subset by **name**
 ```{r}
 
 
+```
+
+
+
+
+## Dimension (`dim`)
+
+You can transform an atomic vector into an n-dimensional array by giving a dimension (`dim`).
+
+```{r}
+(x <- 1:6)
+```
+
+Set dimension of vector to 2 rows x 3 columns
+
+```{r}
+dim(x) <- c(2, 3)
+x
+```
+
+```{r}
+dim(x) <- c(3, 2)
+x
 ```
 
 
