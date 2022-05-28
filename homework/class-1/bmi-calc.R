@@ -1,9 +1,11 @@
-#' Write R code to calculate BMI (Body Mass Index) of 4 people:
+#' # BMI Calculator
 #'
-#' John: Wt = 60 kg, Ht = 170 cm
-#' Amy: Wt = 70 kg, Ht = 175 cm
-#' Penny: Wt = 85 kg, Ht = 165 cm
-#' Yourself: use your weight and hight
+#' Write R code to calculate **BMI (Body Mass Index)** of 4 people:
+#'
+#' - John: Wt = 60 kg, Ht = 170 cm
+#' - Amy: Wt = 70 kg, Ht = 175 cm
+#' - Penny: Wt = 85 kg, Ht = 165 cm
+#' - Yourself: use your weight and hight
 #'
 #'  Try using these 3 variables:
 #'
@@ -12,7 +14,7 @@
 #'
 #'
 #' Calculate the BMI, round the result to 2 decimal places (use `round()`),
-#' and assign the result to `my_bmi`.
+#' and, assign the result to `my_bmi`.
 
 weight_kg <- c(60, 70, 85, NA) #' replace `NA` with your weight
 
@@ -21,6 +23,8 @@ weight_kg <- c(60, 70, 85, NA) #' replace `NA` with your weight
 
 
 
+#' # Summary Stats
+#'
 #' Find the mean: `mean()`, maximum: `max()`, minimum: `min()` of the BMI
 
 
