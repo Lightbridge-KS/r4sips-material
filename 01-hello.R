@@ -280,22 +280,5 @@ rm(countries, top_3_nums)
 # Compile Report by Ctrl+Shift+K (Windows) or Cmd+Shift+K (Mac)
 
 
-# Home Work ---------------------------------------------------------------
-
-
-#' Write a formula to calculate your BMI (Body Mass Index) with using 2 variable:
-#'
-#' - `my_weight_kg`: your weight in kg
-#' - `my_height_cm`: your height in cm
-#'
-#' Compute BMI using these 2 variables, and assign the result to `my_bmi`.
-#'
-my_weight_kg <- 70
-
-my_height_cm <- 180
-
-# my_bmi
-
-
 
 
