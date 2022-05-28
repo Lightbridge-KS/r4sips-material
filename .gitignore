@@ -29,7 +29,7 @@ vignettes/*.pdf
 # Data Store
 .DS_Store
 # PDF
-/*.pdf
+*.pdf
 # Word
 *.docx
 # HTML
